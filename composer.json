@@ -20,7 +20,11 @@
     "autoload": {
         "psr-4": {
             "NetForce\\Framework\\": "src/"
-        }
+        },
+
+        "files": [
+            "src/Support/helpers.php"
+        ]
     },
 
     "minimum-stability": "dev",

@@ -13,7 +13,7 @@ class MongoServiceProvider extends ServiceProvider
     {
         // Register mongodb driver
         db()->extend('mongodb', function ($config) {
-            return new Jenssegers\Mongodb\Connection($config);
+            return new \Jenssegers\Mongodb\Connection($config);
         });
 
         // Register connection

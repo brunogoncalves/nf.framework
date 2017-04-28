@@ -60,3 +60,15 @@ if (! function_exists('auth')) {
         return $auth->guard($guard);
     }
 }
+
+if (! function_exists('schema')) {
+
+    /**
+     * @param null $connection
+     * @return \Illuminate\Database\Schema\Builder
+     */
+    function schema($connection = null)
+    {
+        return app('db')->connection($connection)->getSchemaBuilder();
+    }
+}

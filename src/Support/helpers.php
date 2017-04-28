@@ -38,3 +38,25 @@ if (! function_exists('api')) {
         return $api->json($return);
     }
 }
+
+if (! function_exists('auth')) {
+
+    /**
+     * Auth.
+     * @param null $guard
+     * @return \Illuminate\Auth\AuthManager|\Illuminate\Contracts\Auth\Guard
+     */
+    function auth($guard = null)
+    {
+        $auth = app('auth');
+
+        if (is_null($guard)) {
+            return $auth;
+        }
+
+        // Se for informado o guard false ou '', é o guard padrao
+        $guard = (($guard === false) || ($guard == '')) ? null : $guard;
+
+        return $auth->guard($guard);
+    }
+}

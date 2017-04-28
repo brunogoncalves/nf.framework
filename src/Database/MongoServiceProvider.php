@@ -20,11 +20,11 @@ class MongoServiceProvider extends ServiceProvider
         $cons = config()->get('database.connections', []);
         $cons['mongo'] = [
             'driver' => 'mongodb',
-            'host' => env('MDB_HOST', 'localhost'),
-            'port' => env('MDB_PORT', 27017),
-            'database' => env('MDB_DATABASE'),
-            'username' => env('MDB_USERNAME'),
-            'password' => env('MDB_PASSWORD'),
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
             'options' => [
                 'database' => 'admin'
             ]

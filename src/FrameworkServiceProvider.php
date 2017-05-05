@@ -11,6 +11,7 @@ class FrameworkServiceProvider extends AggregateServiceProvider
      */
     protected $providers = [
         '\Jenssegers\Mongodb\MongodbServiceProvider',
+        '\Jenssegers\Mongodb\MongodbQueueServiceProvider',
         '\NetForce\Framework\Http\HttpServiceProvider',
         '\NetForce\Framework\Database\MongoServiceProvider',
     ];
